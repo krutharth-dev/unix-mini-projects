@@ -1,0 +1,12 @@
+# macOS files
+.DS_Store
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# System files
+Thumbs.db
