@@ -1,0 +1,14 @@
+# Logs and generated reports
+logs/*.log
+reports/*.txt
+
+# Keep folder placeholders
+!logs/.gitkeep
+!reports/.gitkeep
+
+# macOS files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
