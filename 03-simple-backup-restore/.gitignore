@@ -1,0 +1,21 @@
+# Generated backup archives
+backups/*
+!backups/.gitkeep
+*.tar.gz
+*.zip
+
+# Generated restore output
+restored_files/*
+!restored_files/.gitkeep
+
+# Generated logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# macOS files
+.DS_Store

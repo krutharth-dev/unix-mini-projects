@@ -1,0 +1,4 @@
+1. Create a backup
+2. List available backups
+3. Restore a selected backup
+4. View the backup log

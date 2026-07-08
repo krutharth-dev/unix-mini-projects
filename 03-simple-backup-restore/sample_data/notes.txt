@@ -1,0 +1,2 @@
+This is sample data for the backup and restore manager.
+You can edit this file and create a backup to test the project.
