@@ -1,0 +1,12 @@
+# Generated output files
+outputs/*.txt
+
+# Keep output folder
+!outputs/.gitkeep
+
+# macOS files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
