@@ -4,6 +4,15 @@ This file lists practical improvements that can make the Unix Mini Projects repo
 
 ---
 
+## Completed Recent Upgrades
+
+- Added `run_all_projects.sh` as a top-level master launcher.
+- Updated the root README with launcher instructions.
+- Updated the repository structure to include the launcher.
+- Added a recommended demo order for project presentation.
+
+---
+
 ## Priority 1: Documentation and Demo Improvements
 
 - Add terminal screenshots for each mini project.
@@ -16,6 +25,7 @@ Suggested table:
 
 | Project | Main Script | Purpose |
 |---|---|---|
+| Master Launcher | `run_all_projects.sh` | Open all mini projects from one menu |
 | Process Monitoring | `process_monitor.sh` | Monitor selected services/processes |
 | Interactive Menu System | `main_menu.sh` | Run common system tools from a menu |
 | Backup/Restore Manager | `backup_manager.sh` | Create and restore compressed backups |
@@ -35,33 +45,7 @@ Suggested table:
 
 ---
 
-## Priority 3: Add a Master Launcher
-
-Add a top-level script that launches all mini projects from one menu.
-
-Suggested script:
-
-```text
-run_all_projects.sh
-```
-
-Possible menu:
-
-```text
-Unix Mini Projects Launcher
-1. Process Monitoring and Alert System
-2. Interactive Menu-Driven Unix System
-3. Simple Backup and Restore Manager
-4. Disk Usage Email Alert System
-5. ASCII Art File Converter
-6. Exit
-```
-
-This will make the repository feel like one connected project rather than separate scripts.
-
----
-
-## Priority 4: Automation Enhancements
+## Priority 3: Automation Enhancements
 
 ### Process Monitoring
 
@@ -98,7 +82,7 @@ This will make the repository feel like one connected project rather than separa
 
 ---
 
-## Priority 5: Testing
+## Priority 4: Testing
 
 - Add shellcheck recommendations.
 - Add test cases for common functions.
@@ -108,7 +92,7 @@ This will make the repository feel like one connected project rather than separa
 
 ---
 
-## Priority 6: Professional Portfolio Enhancements
+## Priority 5: Professional Portfolio Enhancements
 
 - Add badges to the README.
 - Add screenshots.
@@ -123,8 +107,8 @@ This will make the repository feel like one connected project rather than separa
 
 The best immediate upgrade is:
 
-1. Add a top-level launcher script.
-2. Add screenshots/sample outputs.
-3. Add cron-job examples for monitoring and backup scripts.
-4. Add consistent code comments across scripts.
-5. Add ShellCheck-compatible improvements.
+1. Add screenshots/sample outputs.
+2. Add cron-job examples for monitoring and backup scripts.
+3. Add consistent code comments across scripts.
+4. Add ShellCheck-compatible improvements.
+5. Add an installation/setup script for optional tools.
