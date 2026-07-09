@@ -8,16 +8,35 @@ This repository is designed to demonstrate Bash scripting fundamentals through m
 
 ## Repository Overview
 
-This repository currently contains five Unix shell scripting projects and one master launcher script:
+This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, and cron automation examples:
 
-| No. | Project | Main Purpose |
+| No. | Project/File | Main Purpose |
 |---|---|---|
 | 1 | Process Monitoring and Alert System | Monitor selected processes/services and log their status |
 | 2 | Interactive Menu-Driven Unix System | Provide a terminal dashboard for common system tasks |
 | 3 | Simple Backup and Restore Manager | Create, list, restore, and delete compressed backups |
 | 4 | Disk Usage Email Alert System | Check disk usage and generate alerts when limits are crossed |
 | 5 | ASCII Art File Converter | Generate and save terminal ASCII banners/messages |
-| 6 | Master Launcher | Open all mini projects from one top-level menu |
+| 6 | `setup_all.sh` | Prepare scripts and check optional tools |
+| 7 | `run_all_projects.sh` | Open all mini projects from one top-level menu |
+| 8 | `CRON_EXAMPLES.md` | Show examples for scheduling scripts automatically |
+
+---
+
+## Quick Setup
+
+Run this once after cloning the repository:
+
+```bash
+chmod +x setup_all.sh
+./setup_all.sh
+```
+
+The setup script:
+
+- Adds execute permission to all main scripts
+- Checks optional tools such as `mail`, `figlet`, `cowsay`, and `shellcheck`
+- Prints install hints for macOS and Ubuntu/Debian
 
 ---
 
@@ -34,7 +53,6 @@ This script allows users to open any mini project from one menu.
 ### How to Run the Master Launcher
 
 ```bash
-chmod +x run_all_projects.sh
 ./run_all_projects.sh
 ```
 
@@ -49,6 +67,24 @@ UNIX MINI PROJECTS LAUNCHER
 5. ASCII Art File Converter
 6. Exit
 ```
+
+---
+
+## Cron Automation Examples
+
+Cron examples are documented in:
+
+```text
+CRON_EXAMPLES.md
+```
+
+That file includes examples for:
+
+- Running disk usage checks every hour
+- Running disk usage checks daily
+- Scheduling backup scripts
+- Running process monitoring every 15 minutes
+- Saving cron output to log files
 
 ---
 
@@ -185,7 +221,8 @@ A terminal utility that generates ASCII art banners and fun command-line message
 - Configuration files
 - `tar` compression
 - `df` disk usage monitoring
-- Optional `mail`, `figlet`, and `cowsay` commands
+- Optional `mail`, `figlet`, `cowsay`, and `shellcheck` commands
+- Cron automation examples
 
 ---
 
@@ -224,7 +261,9 @@ Unix Mini Projects/
 │   ├── outputs/
 │   ├── sample_inputs/
 │   └── README.md
+├── setup_all.sh
 ├── run_all_projects.sh
+├── CRON_EXAMPLES.md
 ├── README.md
 ├── UPGRADE_PLAN.md
 └── .gitignore
@@ -238,12 +277,6 @@ Navigate into the required project folder:
 
 ```bash
 cd 03-simple-backup-restore
-```
-
-Give execution permission to the main script:
-
-```bash
-chmod +x backup_manager.sh
 ```
 
 Run the script:
@@ -260,18 +293,19 @@ The exact script name differs for each mini project. Check the project-specific 
 
 For a portfolio or viva demonstration, the best order is:
 
-1. Run `run_all_projects.sh` to show the master launcher.
-2. Run the Interactive Menu-Driven Unix System to demonstrate breadth.
-3. Run the Backup and Restore Manager to show practical automation.
-4. Run the Disk Usage Alert System to show monitoring and alerts.
-5. Show Process Monitoring to demonstrate system administration logic.
-6. End with ASCII Art Converter as a lighter utility project.
+1. Run `setup_all.sh` to show preparation and optional tool checks.
+2. Run `run_all_projects.sh` to show the master launcher.
+3. Run the Interactive Menu-Driven Unix System to demonstrate breadth.
+4. Run the Backup and Restore Manager to show practical automation.
+5. Run the Disk Usage Alert System to show monitoring and alerts.
+6. Show Process Monitoring to demonstrate system administration logic.
+7. End with ASCII Art Converter as a lighter utility project.
 
 ---
 
 ## Why This Repository Is Useful
 
-This repository demonstrates practical Unix/Linux scripting ability through multiple focused mini projects rather than a single isolated script. It shows how Bash can be used for real tasks such as monitoring, backup automation, disk usage checks, system reports, and terminal utilities.
+This repository demonstrates practical Unix/Linux scripting ability through multiple focused mini projects rather than a single isolated script. It shows how Bash can be used for real tasks such as monitoring, backup automation, disk usage checks, system reports, terminal utilities, setup workflows, and cron-style automation planning.
 
 It is useful for demonstrating:
 
@@ -282,6 +316,7 @@ It is useful for demonstrating:
 - File processing
 - Modular scripting
 - Practical problem-solving
+- Setup and scheduling documentation
 
 ---
 
@@ -290,6 +325,7 @@ It is useful for demonstrating:
 - Projects are terminal-based and do not include graphical interfaces.
 - Some commands may behave differently between macOS and Linux.
 - Email alert functionality may require system mail configuration.
+- Some scripts are menu-driven, so additional non-interactive modes would improve cron compatibility.
 - The scripts are educational and should be tested carefully before being used on important production systems.
 
 ---
@@ -298,9 +334,8 @@ It is useful for demonstrating:
 
 - Add screenshots or terminal demo GIFs for every project.
 - Add automated test scripts.
-- Add installation/setup script for all projects.
 - Add cross-platform compatibility notes for macOS and Linux.
-- Add cron-job setup examples for monitoring and backup scripts.
+- Add non-interactive command-line modes such as `--backup-now` and `--check-now`.
 - Add logging level support such as INFO, WARNING, and ERROR.
 - Add CSV/HTML report export for monitoring tools.
 
@@ -308,4 +343,4 @@ It is useful for demonstrating:
 
 ## Resume Summary
 
-Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, disk usage alerts, ASCII art file conversion, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
+Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, disk usage alerts, ASCII art file conversion, setup automation, cron scheduling examples, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
