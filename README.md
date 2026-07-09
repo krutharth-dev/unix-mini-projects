@@ -8,7 +8,7 @@ This repository is designed to demonstrate Bash scripting fundamentals through m
 
 ## Repository Overview
 
-This repository currently contains five Unix shell scripting projects:
+This repository currently contains five Unix shell scripting projects and one master launcher script:
 
 | No. | Project | Main Purpose |
 |---|---|---|
@@ -17,6 +17,38 @@ This repository currently contains five Unix shell scripting projects:
 | 3 | Simple Backup and Restore Manager | Create, list, restore, and delete compressed backups |
 | 4 | Disk Usage Email Alert System | Check disk usage and generate alerts when limits are crossed |
 | 5 | ASCII Art File Converter | Generate and save terminal ASCII banners/messages |
+| 6 | Master Launcher | Open all mini projects from one top-level menu |
+
+---
+
+## Master Launcher
+
+The repository includes a top-level launcher script:
+
+```text
+run_all_projects.sh
+```
+
+This script allows users to open any mini project from one menu.
+
+### How to Run the Master Launcher
+
+```bash
+chmod +x run_all_projects.sh
+./run_all_projects.sh
+```
+
+### Launcher Menu
+
+```text
+UNIX MINI PROJECTS LAUNCHER
+1. Process Monitoring and Alert System
+2. Interactive Menu-Driven Unix System
+3. Simple Backup and Restore Manager
+4. Disk Usage Email Alert System
+5. ASCII Art File Converter
+6. Exit
+```
 
 ---
 
@@ -192,13 +224,15 @@ Unix Mini Projects/
 │   ├── outputs/
 │   ├── sample_inputs/
 │   └── README.md
+├── run_all_projects.sh
 ├── README.md
+├── UPGRADE_PLAN.md
 └── .gitignore
 ```
 
 ---
 
-## How to Run a Project
+## How to Run a Specific Project
 
 Navigate into the required project folder:
 
@@ -226,7 +260,7 @@ The exact script name differs for each mini project. Check the project-specific 
 
 For a portfolio or viva demonstration, the best order is:
 
-1. Show the root README and repository structure.
+1. Run `run_all_projects.sh` to show the master launcher.
 2. Run the Interactive Menu-Driven Unix System to demonstrate breadth.
 3. Run the Backup and Restore Manager to show practical automation.
 4. Run the Disk Usage Alert System to show monitoring and alerts.
@@ -269,10 +303,9 @@ It is useful for demonstrating:
 - Add cron-job setup examples for monitoring and backup scripts.
 - Add logging level support such as INFO, WARNING, and ERROR.
 - Add CSV/HTML report export for monitoring tools.
-- Add a combined master launcher script for all mini projects.
 
 ---
 
 ## Resume Summary
 
-Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, disk usage alerts, and ASCII art file conversion using Bash, configuration files, logging, terminal commands, and practical automation workflows.
+Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, disk usage alerts, ASCII art file conversion, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
