@@ -7,8 +7,10 @@ This file lists practical improvements that can make the Unix Mini Projects repo
 ## Completed Recent Upgrades
 
 - Added `run_all_projects.sh` as a top-level master launcher.
-- Updated the root README with launcher instructions.
-- Updated the repository structure to include the launcher.
+- Added `setup_all.sh` to prepare script permissions and check optional tools.
+- Added `CRON_EXAMPLES.md` with automation scheduling examples.
+- Updated the root README with setup, launcher, cron, and demo instructions.
+- Updated the repository structure to include the launcher and setup documentation.
 - Added a recommended demo order for project presentation.
 
 ---
@@ -25,6 +27,7 @@ Suggested table:
 
 | Project | Main Script | Purpose |
 |---|---|---|
+| Setup Script | `setup_all.sh` | Prepare script permissions and check optional tools |
 | Master Launcher | `run_all_projects.sh` | Open all mini projects from one menu |
 | Process Monitoring | `process_monitor.sh` | Monitor selected services/processes |
 | Interactive Menu System | `main_menu.sh` | Run common system tools from a menu |
@@ -53,6 +56,7 @@ Suggested table:
 - Add desktop notification option.
 - Add service restart logs.
 - Add process uptime tracking.
+- Add non-interactive mode such as `--monitor-once`.
 
 ### Interactive Menu System
 
@@ -66,13 +70,14 @@ Suggested table:
 - Add backup size display.
 - Add checksum verification.
 - Add restore preview before extraction.
+- Add non-interactive mode such as `--backup-now`.
 
 ### Disk Usage Email Alert
 
-- Add cron setup guide.
 - Add multi-mount report table.
 - Add warning and critical thresholds.
 - Add HTML report export.
+- Add non-interactive mode such as `--check-now`.
 
 ### ASCII Art Converter
 
@@ -84,7 +89,7 @@ Suggested table:
 
 ## Priority 4: Testing
 
-- Add shellcheck recommendations.
+- Add ShellCheck recommendations.
 - Add test cases for common functions.
 - Add sample configs for testing.
 - Add dry-run modes for scripts that change files.
@@ -108,7 +113,7 @@ Suggested table:
 The best immediate upgrade is:
 
 1. Add screenshots/sample outputs.
-2. Add cron-job examples for monitoring and backup scripts.
+2. Add non-interactive modes for cron-friendly scripts.
 3. Add consistent code comments across scripts.
 4. Add ShellCheck-compatible improvements.
 5. Add an installation/setup script for optional tools.
