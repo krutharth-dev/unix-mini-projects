@@ -22,6 +22,7 @@ EMAIL_ENABLED="no"
 EMAIL_TO=""
 EMAIL_SUBJECT="Disk Usage Alert"
 SEND_DESKTOP_NOTIFICATION="yes"
+NON_INTERACTIVE=0
 
 log_event() {
     local level="$1"
@@ -33,6 +34,10 @@ log_event() {
 }
 
 pause_screen() {
+    if [ "$NON_INTERACTIVE" -eq 1 ]; then
+        return
+    fi
+
     echo
     read -r -p "Press Enter to continue..."
 }
@@ -42,7 +47,10 @@ print_line() {
 }
 
 show_header() {
-    clear
+    if [ "$NON_INTERACTIVE" -ne 1 ]; then
+        clear
+    fi
+
     echo "============================================================"
     echo "              DISK USAGE EMAIL ALERT SYSTEM                 "
     echo "============================================================"
@@ -283,6 +291,16 @@ show_config() {
     pause_screen
 }
 
+show_help() {
+    echo "Disk Usage Email Alert System"
+    echo
+    echo "Usage:"
+    echo "  ./disk_alert.sh                 Open interactive menu"
+    echo "  ./disk_alert.sh --check-now     Run one disk usage check without menu prompts"
+    echo "  ./disk_alert.sh --view-report   Print the latest generated report"
+    echo "  ./disk_alert.sh --help          Show this help message"
+}
+
 main_menu() {
     load_config
 
@@ -333,4 +351,30 @@ main_menu() {
     done
 }
 
-main_menu
+case "$1" in
+    --check-now)
+        NON_INTERACTIVE=1
+        run_disk_check
+        ;;
+    --view-report)
+        NON_INTERACTIVE=1
+        if [ -f "$LATEST_REPORT" ]; then
+            cat "$LATEST_REPORT"
+        else
+            echo "No report found yet. Run ./disk_alert.sh --check-now first."
+            exit 1
+        fi
+        ;;
+    --help|-h)
+        show_help
+        ;;
+    "")
+        main_menu
+        ;;
+    *)
+        echo "Unknown option: $1"
+        echo
+        show_help
+        exit 1
+        ;;
+esac
