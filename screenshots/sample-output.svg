@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" rx="20" fill="#0d1117"/>
+  <rect x="0" y="0" width="1200" height="54" rx="20" fill="#161b22"/>
+  <circle cx="32" cy="27" r="9" fill="#ff5f56"/>
+  <circle cx="58" cy="27" r="9" fill="#ffbd2e"/>
+  <circle cx="84" cy="27" r="9" fill="#27c93f"/>
+  <text x="600" y="35" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9" text-anchor="middle">unix-mini-projects</text>
+
+  <text x="36" y="90" font-family="Menlo, Consolas, monospace" font-size="19" fill="#7ee787">user@ubuntu</text>
+  <text x="170" y="90" font-family="Menlo, Consolas, monospace" font-size="19" fill="#58a6ff">~/unix-mini-projects</text>
+  <text x="395" y="90" font-family="Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9">$ ./setup_all.sh</text>
+
+  <text x="36" y="135" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">Executable: run_all_projects.sh</text>
+  <text x="36" y="165" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">Executable: 01-process-monitoring-alert/process_monitor.sh</text>
+  <text x="36" y="195" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">Executable: 03-simple-backup-restore/backup_manager.sh</text>
+  <text x="36" y="225" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">Executable: 03-simple-backup-restore/backup_now.sh</text>
+  <text x="36" y="255" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">Executable: 04-disk-usage-email-alert/disk_alert.sh</text>
+  <text x="36" y="295" font-family="Menlo, Consolas, monospace" font-size="18" fill="#7ee787">Found: figlet - ASCII banner generation</text>
+  <text x="36" y="325" font-family="Menlo, Consolas, monospace" font-size="18" fill="#7ee787">Found: cowsay - cowsay-style terminal messages</text>
+  <text x="36" y="355" font-family="Menlo, Consolas, monospace" font-size="18" fill="#d29922">Optional missing: mail - email alerts for disk usage monitoring</text>
+
+  <text x="36" y="410" font-family="Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9">$ ./run_all_projects.sh</text>
+  <text x="36" y="455" font-family="Menlo, Consolas, monospace" font-size="20" fill="#7ee787" font-weight="700">UNIX MINI PROJECTS LAUNCHER</text>
+  <text x="36" y="500" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">1. Process Monitoring and Alert System</text>
+  <text x="36" y="530" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">2. Interactive Menu-Driven Unix System</text>
+  <text x="36" y="560" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">3. Simple Backup and Restore Manager</text>
+  <text x="36" y="590" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">4. Disk Usage Email Alert System</text>
+  <text x="36" y="620" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">5. ASCII Art File Converter</text>
+  <text x="36" y="650" font-family="Menlo, Consolas, monospace" font-size="18" fill="#c9d1d9">6. Exit</text>
+
+  <text x="36" y="700" font-family="Menlo, Consolas, monospace" font-size="20" fill="#7ee787" font-weight="700">Cron-friendly commands</text>
+  <text x="36" y="730" font-family="Menlo, Consolas, monospace" font-size="17" fill="#c9d1d9">./process_monitor.sh --monitor-once | ./backup_now.sh | ./disk_alert.sh --check-now</text>
+</svg>
