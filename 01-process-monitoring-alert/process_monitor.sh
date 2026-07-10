@@ -164,7 +164,7 @@ print_summary() {
     echo "================================================="
 }
 
-main() {
+run_monitor_once() {
     print_header
     check_config_file
     log_event "INFO" "Process monitoring started."
@@ -173,4 +173,26 @@ main() {
     log_event "INFO" "Process monitoring completed."
 }
 
-main
+show_help() {
+    echo "Process Monitoring and Alert System"
+    echo
+    echo "Usage:"
+    echo "  ./process_monitor.sh                 Run one monitoring check"
+    echo "  ./process_monitor.sh --monitor-once  Run one monitoring check explicitly"
+    echo "  ./process_monitor.sh --help          Show this help message"
+}
+
+case "$1" in
+    --monitor-once|"")
+        run_monitor_once
+        ;;
+    --help|-h)
+        show_help
+        ;;
+    *)
+        echo "Unknown option: $1"
+        echo
+        show_help
+        exit 1
+        ;;
+esac
