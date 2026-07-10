@@ -6,6 +6,12 @@ This repository is designed to demonstrate Bash scripting fundamentals through m
 
 ---
 
+## Sample Output
+
+![Unix Mini Projects sample output](screenshots/sample-output.svg)
+
+---
+
 ## Repository Overview
 
 This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, non-interactive automation commands, and cron automation examples:
@@ -225,6 +231,8 @@ Unix Mini Projects/
 │   ├── outputs/
 │   ├── sample_inputs/
 │   └── README.md
+├── screenshots/
+│   └── sample-output.svg
 ├── setup_all.sh
 ├── run_all_projects.sh
 ├── CRON_EXAMPLES.md
