@@ -34,9 +34,11 @@ echo
 
 echo "Setting script permissions..."
 make_executable "$ROOT_DIR/run_all_projects.sh"
+make_executable "$ROOT_DIR/setup_all.sh"
 make_executable "$ROOT_DIR/01-process-monitoring-alert/process_monitor.sh"
 make_executable "$ROOT_DIR/02-interactive-menu-system/main_menu.sh"
 make_executable "$ROOT_DIR/03-simple-backup-restore/backup_manager.sh"
+make_executable "$ROOT_DIR/03-simple-backup-restore/backup_now.sh"
 make_executable "$ROOT_DIR/04-disk-usage-email-alert/disk_alert.sh"
 make_executable "$ROOT_DIR/05-ascii-art-file-converter/ascii_converter.sh"
 
@@ -53,6 +55,12 @@ echo
 
 echo "Run the master launcher with:"
 echo "  ./run_all_projects.sh"
+echo
+
+echo "Cron-friendly examples:"
+echo "  ./01-process-monitoring-alert/process_monitor.sh --monitor-once"
+echo "  ./03-simple-backup-restore/backup_now.sh"
+echo "  ./04-disk-usage-email-alert/disk_alert.sh --check-now"
 echo
 
 echo "Optional macOS installs using Homebrew:"
