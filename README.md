@@ -8,7 +8,7 @@ This repository is designed to demonstrate Bash scripting fundamentals through m
 
 ## Repository Overview
 
-This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, and cron automation examples:
+This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, non-interactive automation commands, and cron automation examples:
 
 | No. | Project/File | Main Purpose |
 |---|---|---|
@@ -37,6 +37,7 @@ The setup script:
 - Adds execute permission to all main scripts
 - Checks optional tools such as `mail`, `figlet`, `cowsay`, and `shellcheck`
 - Prints install hints for macOS and Ubuntu/Debian
+- Prints cron-friendly command examples
 
 ---
 
@@ -56,17 +57,20 @@ This script allows users to open any mini project from one menu.
 ./run_all_projects.sh
 ```
 
-### Launcher Menu
+---
 
-```text
-UNIX MINI PROJECTS LAUNCHER
-1. Process Monitoring and Alert System
-2. Interactive Menu-Driven Unix System
-3. Simple Backup and Restore Manager
-4. Disk Usage Email Alert System
-5. ASCII Art File Converter
-6. Exit
+## Cron-Friendly Commands
+
+The repository now includes commands that can run without opening interactive menus:
+
+```bash
+./01-process-monitoring-alert/process_monitor.sh --monitor-once
+./03-simple-backup-restore/backup_now.sh
+./04-disk-usage-email-alert/disk_alert.sh --check-now
+./04-disk-usage-email-alert/disk_alert.sh --view-report
 ```
+
+These are useful for cron jobs, scheduled automation, or quick terminal checks.
 
 ---
 
@@ -82,7 +86,7 @@ That file includes examples for:
 
 - Running disk usage checks every hour
 - Running disk usage checks daily
-- Scheduling backup scripts
+- Scheduling automatic backups
 - Running process monitoring every 15 minutes
 - Saving cron output to log files
 
@@ -100,14 +104,7 @@ A shell script that checks whether selected processes are running, logs their st
 - Alerts when a selected process is stopped
 - Supports optional restart commands
 - Works with macOS/Linux-style terminal commands
-
-### Concepts Demonstrated
-
-- Process monitoring
-- Configuration-file usage
-- Conditional logic
-- Logging
-- Basic service health checks
+- Supports `--monitor-once` for explicit non-interactive execution
 
 ---
 
@@ -125,15 +122,6 @@ A modular menu-driven shell scripting project that provides a terminal-based int
 - Modular script structure
 - Shared utility functions
 
-### Concepts Demonstrated
-
-- Modular Bash scripting
-- Menu-driven programming
-- File operations
-- Process inspection
-- Network commands
-- System reporting
-
 ---
 
 ## Project 3: Simple Backup and Restore Manager
@@ -149,15 +137,7 @@ A Unix shell scripting project that provides a backup and restore workflow using
 - View backup logs
 - Change source directory for the current session
 - Automatically rotate old backups based on a maximum backup limit
-
-### Concepts Demonstrated
-
-- File and directory handling
-- Compression using `tar`
-- Backup and restore logic
-- Log file management
-- Configuration files
-- Safe confirmation before destructive actions
+- Includes `backup_now.sh` for non-interactive backup creation
 
 ---
 
@@ -174,15 +154,7 @@ A shell script that monitors disk usage and generates an alert when usage crosse
 - Optional desktop notifications
 - Optional email alerts using the `mail` command
 - Menu-driven interface
-
-### Concepts Demonstrated
-
-- Disk monitoring with `df`
-- Alert logic
-- Report generation
-- Logging
-- Config-file driven scripting
-- Optional email notification workflow
+- Supports `--check-now` and `--view-report` command-line modes
 
 ---
 
@@ -199,15 +171,6 @@ A terminal utility that generates ASCII art banners and fun command-line message
 - Preview output files from the terminal
 - Check whether optional tools are installed
 - Fallback formatting if optional tools are missing
-
-### Concepts Demonstrated
-
-- File input/output
-- External command usage
-- Tool availability checks
-- Fallback logic
-- Menu-driven scripting
-- Terminal-based creativity
 
 ---
 
@@ -243,6 +206,7 @@ Unix Mini Projects/
 │   └── README.md
 ├── 03-simple-backup-restore/
 │   ├── backup_manager.sh
+│   ├── backup_now.sh
 │   ├── config/
 │   ├── backups/
 │   ├── logs/
@@ -271,34 +235,16 @@ Unix Mini Projects/
 
 ---
 
-## How to Run a Specific Project
-
-Navigate into the required project folder:
-
-```bash
-cd 03-simple-backup-restore
-```
-
-Run the script:
-
-```bash
-./backup_manager.sh
-```
-
-The exact script name differs for each mini project. Check the project-specific README inside each folder.
-
----
-
 ## Suggested Demo Order
 
 For a portfolio or viva demonstration, the best order is:
 
 1. Run `setup_all.sh` to show preparation and optional tool checks.
 2. Run `run_all_projects.sh` to show the master launcher.
-3. Run the Interactive Menu-Driven Unix System to demonstrate breadth.
-4. Run the Backup and Restore Manager to show practical automation.
-5. Run the Disk Usage Alert System to show monitoring and alerts.
-6. Show Process Monitoring to demonstrate system administration logic.
+3. Run `disk_alert.sh --check-now` to show non-interactive monitoring.
+4. Run `backup_now.sh` to show automated backup creation.
+5. Run `process_monitor.sh --monitor-once` to show process monitoring automation.
+6. Show the interactive menu project.
 7. End with ASCII Art Converter as a lighter utility project.
 
 ---
@@ -307,40 +253,8 @@ For a portfolio or viva demonstration, the best order is:
 
 This repository demonstrates practical Unix/Linux scripting ability through multiple focused mini projects rather than a single isolated script. It shows how Bash can be used for real tasks such as monitoring, backup automation, disk usage checks, system reports, terminal utilities, setup workflows, and cron-style automation planning.
 
-It is useful for demonstrating:
-
-- Unix/Linux command-line skills
-- Bash scripting fundamentals
-- Automation workflows
-- System monitoring
-- File processing
-- Modular scripting
-- Practical problem-solving
-- Setup and scheduling documentation
-
----
-
-## Limitations
-
-- Projects are terminal-based and do not include graphical interfaces.
-- Some commands may behave differently between macOS and Linux.
-- Email alert functionality may require system mail configuration.
-- Some scripts are menu-driven, so additional non-interactive modes would improve cron compatibility.
-- The scripts are educational and should be tested carefully before being used on important production systems.
-
----
-
-## Future Enhancements
-
-- Add screenshots or terminal demo GIFs for every project.
-- Add automated test scripts.
-- Add cross-platform compatibility notes for macOS and Linux.
-- Add non-interactive command-line modes such as `--backup-now` and `--check-now`.
-- Add logging level support such as INFO, WARNING, and ERROR.
-- Add CSV/HTML report export for monitoring tools.
-
 ---
 
 ## Resume Summary
 
-Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, disk usage alerts, ASCII art file conversion, setup automation, cron scheduling examples, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
+Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, non-interactive backup execution, disk usage alerts, cron-friendly command-line modes, ASCII art file conversion, setup automation, cron scheduling examples, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
