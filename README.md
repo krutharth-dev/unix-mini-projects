@@ -1,5 +1,10 @@
 # Unix Mini Projects
 
+![Shell Syntax Check](https://github.com/krutharth-dev/unix-mini-projects/actions/workflows/shell-check.yml/badge.svg)
+![Language: Bash](https://img.shields.io/badge/Language-Bash-green.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Platform: Unix/Linux](https://img.shields.io/badge/Platform-Unix%2FLinux-lightgrey.svg)
+
 A collection of practical Unix/Linux shell scripting mini projects focused on automation, monitoring, file handling, system administration, and terminal-based utilities.
 
 This repository is designed to demonstrate Bash scripting fundamentals through multiple small but useful command-line projects. Each mini project is placed in its own folder with its own script, configuration files, logs, sample data, and README where applicable.
@@ -14,7 +19,7 @@ This repository is designed to demonstrate Bash scripting fundamentals through m
 
 ## Repository Overview
 
-This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, non-interactive automation commands, and cron automation examples:
+This repository currently contains five Unix shell scripting projects, one setup script, one master launcher script, non-interactive automation commands, cron automation examples, GitHub Actions shell syntax checking, and an MIT License:
 
 | No. | Project/File | Main Purpose |
 |---|---|---|
@@ -192,6 +197,7 @@ A terminal utility that generates ASCII art banners and fun command-line message
 - `df` disk usage monitoring
 - Optional `mail`, `figlet`, `cowsay`, and `shellcheck` commands
 - Cron automation examples
+- GitHub Actions CI
 
 ---
 
@@ -199,6 +205,9 @@ A terminal utility that generates ASCII art banners and fun command-line message
 
 ```text
 Unix Mini Projects/
+├── .github/
+│   └── workflows/
+│       └── shell-check.yml
 ├── 01-process-monitoring-alert/
 │   ├── process_monitor.sh
 │   ├── services.conf
@@ -237,9 +246,26 @@ Unix Mini Projects/
 ├── run_all_projects.sh
 ├── CRON_EXAMPLES.md
 ├── README.md
+├── LICENSE
 ├── UPGRADE_PLAN.md
 └── .gitignore
 ```
+
+---
+
+## Continuous Integration
+
+This repository includes a GitHub Actions workflow that checks shell script syntax on every push and pull request.
+
+```text
+.github/workflows/shell-check.yml
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
@@ -265,4 +291,4 @@ This repository demonstrates practical Unix/Linux scripting ability through mult
 
 ## Resume Summary
 
-Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, non-interactive backup execution, disk usage alerts, cron-friendly command-line modes, ASCII art file conversion, setup automation, cron scheduling examples, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
+Created a collection of Unix shell scripting projects including process monitoring, menu-driven system administration, backup and restore automation, non-interactive backup execution, disk usage alerts, cron-friendly command-line modes, ASCII art file conversion, setup automation, cron scheduling examples, GitHub Actions shell syntax checks, and a master launcher using Bash, configuration files, logging, terminal commands, and practical automation workflows.
