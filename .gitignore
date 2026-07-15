@@ -1,12 +1,31 @@
 # macOS files
 .DS_Store
 
+# Windows system files
+Thumbs.db
+
 # Log files
 *.log
+logs/*.log
+*/logs/*.log
+
+# Generated reports
+reports/*.txt
+*/reports/*.txt
+*.csv
+
+# Backup archives and restored files
+backups/*.tar.gz
+*/backups/*.tar.gz
+restored_files/
+*/restored_files/
 
 # Temporary files
 *.tmp
 *.bak
+*.swp
+*.swo
 
-# System files
-Thumbs.db
+# Editor and IDE files
+.vscode/
+.idea/
