@@ -1,0 +1,22 @@
+name: Shell Syntax Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  shell-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check shell script syntax
+        run: |
+          find . -name "*.sh" -print0 | xargs -0 -n1 bash -n
+
+      - name: Run setup script
+        run: |
+          chmod +x setup_all.sh
+          ./setup_all.sh
